@@ -1,0 +1,14 @@
+.column {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+  }
+  .column-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  

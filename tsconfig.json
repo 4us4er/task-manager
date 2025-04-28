@@ -1,4 +1,12 @@
 {
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["react", "react-dom"]
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
