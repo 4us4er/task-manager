@@ -5,16 +5,24 @@ import { ChangeEvent } from 'react';
 const Column = () => {
   const [task, setTask] = useState<string>('');
   const [tasks, setTasks] = useState<string[]>([]);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
   const handleInput = (evt: ChangeEvent<HTMLInputElement>) => {
     const target = evt.target as HTMLInputElement;
-    setTask(target.value);
+    const value = target.value;
+    if (value === '') {
+      setIsButtonDisabled(true);
+    } else {
+      setIsButtonDisabled(false);
+      setTask(value);
+    }
   };
-
   const handleClick = () => {
     setTasks([...tasks, task]);
     setTask('');
+    setIsButtonDisabled(true);
   };
-  console.log(tasks);
+
   return (
     <>
       <div className={styles.column}>
@@ -28,13 +36,18 @@ const Column = () => {
             value={task}
           />
         </label>
-        <button className={styles.addTask} onClick={handleClick}>
+        <button
+          id="add-button"
+          className={styles.addTask}
+          onClick={handleClick}
+          disabled={isButtonDisabled}
+        >
           + Add Task
         </button>
       </div>
       <div className={styles.taskList}>
         {tasks.map((task) => {
-          return <div>{task}</div>;
+          return <div className={styles.taskElement}>{task}</div>;
         })}
       </div>
     </>
