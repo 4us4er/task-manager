@@ -1,14 +1,38 @@
 .column {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 10px;
-    width: 300px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
-  }
-  .column-title {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+.column-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.task {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: grab;
+}
+.add-task {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+.add-task:hover {
+  background-color: #0056b3;
+}
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
